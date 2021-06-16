@@ -13,7 +13,7 @@ module Moysklad
       group
       productfolder
       uom
-      currency     
+      currency
       price
       image
       employee
@@ -42,6 +42,7 @@ module Moysklad
       store
       time
       variant
+      demand
     }.each do |m|
       require_relative "entities/#{m}"
     end

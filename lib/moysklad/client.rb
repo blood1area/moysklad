@@ -3,10 +3,9 @@ require 'faraday'
 require_relative 'client/errors'
 
 class Moysklad::Client
+  URL  ='https://online.moysklad.ru/api/remap/1.2/'
 
-  # URL = 'https://online.moysklad.ru'
-  URL  ='https://online.moysklad.ru/api/remap/1.1/'
-
+  #universe = Moysklad::Universe.build login: 'burakaev@fonin', password: 'ptScpTjgrK6RMw3Phx'
   def initialize login: nil, password: nil
     @client = Faraday.new URL
     @client.basic_auth login, password
